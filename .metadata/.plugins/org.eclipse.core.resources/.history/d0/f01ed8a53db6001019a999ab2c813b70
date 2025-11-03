@@ -1,0 +1,17 @@
+package com.rays.oneone;
+
+public class College {
+	private int id;
+	private String collegeName;
+	private Student student;
+	public College(int id, String collegeName,Student student) {
+		super();
+		this.id = id;
+		this.collegeName = collegeName;
+	}
+	
+	
+	
+	
+
+}

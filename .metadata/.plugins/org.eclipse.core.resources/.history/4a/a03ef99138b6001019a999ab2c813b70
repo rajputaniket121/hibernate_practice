@@ -1,0 +1,17 @@
+package com.rays.auction;
+
+import java.util.Set;
+
+public class AuctionItem {
+	private int id;
+	private Set<Bid> bids;
+	private String description;
+	public AuctionItem(int id, Set<Bid> bids, String description) {
+		this.id = id;
+		this.bids = bids;
+		this.description = description;
+	}
+	
+	
+
+}

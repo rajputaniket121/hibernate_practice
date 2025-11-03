@@ -1,0 +1,9 @@
+package com.rays.auction;
+
+public class Item {
+	private int id;
+	private String itemName;
+	
+	
+
+}

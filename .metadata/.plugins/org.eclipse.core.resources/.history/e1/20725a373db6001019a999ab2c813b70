@@ -1,0 +1,7 @@
+package com.rays.oneone;
+
+public class College {
+	private int id;
+	
+
+}

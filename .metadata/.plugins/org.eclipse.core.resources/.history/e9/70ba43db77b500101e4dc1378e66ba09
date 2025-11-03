@@ -1,0 +1,63 @@
+package com.rays.user;
+
+import java.util.Date;
+import java.util.List;
+
+public class TestUserModel {
+	public static void main(String[] args) {
+		testSave();
+	}
+	
+	public static void testSave() {
+		UserModel model = new UserModel();
+		UserDTO dto = new UserDTO();
+		dto.setFirstName("Aniket");
+		dto.setLastName("Rajput");
+		dto.setLoginId("aniket@gmail.com");
+		dto.setDob(new Date());
+		dto.setPassword("1234");
+		dto.setAddress("indore");
+		model.save(dto);
+	}
+	
+	public static void testUpdate() {
+		UserModel model = new UserModel();
+		UserDTO dto = new UserDTO();
+		dto.setId(1);
+		dto.setFirstName("Aniket");
+		dto.setLastName("Rajput");
+		dto.setLoginId("aniket@gmail.com");
+		dto.setDob(new Date());
+		dto.setPassword("1234");
+		dto.setAddress("indore");
+		model.update(dto);
+	}
+	
+	public static void testDelete() {
+		UserModel model = new UserModel();
+		UserDTO dto = new UserDTO();
+		dto.setId(1);
+		model.delete(dto);
+	}
+	
+	public static void testAuthentication() {
+		UserModel model = new UserModel();
+		UserDTO dto = new UserDTO();
+		dto.setLoginId("aniket@gmail.com");
+		dto.setPassword("1234");
+		UserDTO authUser =  model.authenticate(dto.getLoginId(), dto.getPassword());
+		System.out.println(authUser.getFirstName());
+	}
+	
+	public static void testSearch() {
+		UserModel model = new UserModel();
+		UserDTO dto = new UserDTO();
+		dto.setLoginId("aniket@gmail.com");
+		dto.setPassword("1234");
+		List list =  model.search(dto, 1, 5);
+		System.out.println(list);
+	}
+	
+	
+
+}

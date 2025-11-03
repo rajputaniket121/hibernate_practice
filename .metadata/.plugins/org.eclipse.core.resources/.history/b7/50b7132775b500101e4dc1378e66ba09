@@ -1,0 +1,14 @@
+package com.rays.user;
+
+import com.rays.crud.TestSave;
+
+public class TestUserModel {
+	public static void main(String[] args) {
+		TestSave();
+	}
+	
+	public static void testSave() {
+		
+	}
+
+}

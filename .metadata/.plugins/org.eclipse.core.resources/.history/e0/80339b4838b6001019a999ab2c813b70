@@ -1,0 +1,8 @@
+package com.rays.auction;
+
+public class Bid {
+	private int id;
+	private int amount;
+	private String timeStamp
+
+}

@@ -1,0 +1,15 @@
+package com.rays.auction;
+
+public class Bid {
+	private int id;
+	private int amount;
+	private String timeStamp;
+	
+	public Bid(int id, int amount, String timeStamp) {
+		this.id = id;
+		this.amount = amount;
+		this.timeStamp = timeStamp;
+	}
+
+
+}

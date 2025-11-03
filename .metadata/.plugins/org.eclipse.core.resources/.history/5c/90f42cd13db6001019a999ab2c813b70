@@ -1,0 +1,22 @@
+package com.rays.oneone;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class TestOneToOne {
+	
+	College college = new College(1, "IIT",new Student(1, "Akshat", "indore"));
+	
+	
+	
+	
+	SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+	Session session =  sessionFactory.openSession();
+	Transaction transaction = session.beginTransaction();
+	session.save(auctionItem);
+	transaction.commit();
+	session.close();
+
+}

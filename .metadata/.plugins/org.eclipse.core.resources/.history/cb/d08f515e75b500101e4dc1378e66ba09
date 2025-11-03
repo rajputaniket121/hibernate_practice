@@ -1,0 +1,24 @@
+package com.rays.user;
+
+import java.util.Date;
+
+import com.rays.crud.TestSave;
+
+public class TestUserModel {
+	public static void main(String[] args) {
+		testSave();
+	}
+	
+	public static void testSave() {
+		UserModel model = new UserModel();
+		UserDTO dto = new UserDTO();
+		dto.setFirstName("Aniket");
+		dto.setLastName("Rajput");
+		dto.setLoginId("aniket@gmail.com");
+		dto.setDob(new Date());
+		dto.setPassword("1234");
+		dto.setAddress("indore");
+		model.save(dto);
+	}
+
+}

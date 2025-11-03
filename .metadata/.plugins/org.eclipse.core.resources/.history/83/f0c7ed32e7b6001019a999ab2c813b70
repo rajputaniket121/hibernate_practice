@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 31 Oct 2025, 4:08:16???pm by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.rays.oneone.College" table="COLLEGE">
+        <id name="id" type="int" access="field">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="collegeName" type="java.lang.String">
+            <column name="COLLEGENAME" />
+        </property>
+        <one-to-one name="student" class="com.rays.oneone.Student" cascade="all">
+        </one-to-one>
+    </class>
+</hibernate-mapping>

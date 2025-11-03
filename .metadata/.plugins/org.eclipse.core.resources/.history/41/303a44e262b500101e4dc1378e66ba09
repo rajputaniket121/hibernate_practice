@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 30 Oct 2025, 12:15:12???pm by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+ <class name="com.rays.user.UserDTO" table="USERDTO">
+  <id name="id" type="int">
+   <column name="ID"/>
+   <generator class="increment"/>
+  </id>
+  <property generated="never" lazy="false" name="firstName" type="java.lang.String">
+   <column name="FIRSTNAME"/>
+  </property>
+  <property generated="never" lazy="false" name="lastName" type="java.lang.String">
+   <column name="LASTNAME"/>
+  </property>
+  <property generated="never" lazy="false" name="loginId" type="java.lang.String">
+   <column name="LOGINID" unique="true"/>
+  </property>
+  <property generated="never" lazy="false" name="password" type="java.lang.String">
+   <column name="PASSWORD"/>
+  </property>
+  <property generated="never" lazy="false" name="dob" type="java.util.Date">
+   <column name="DOB"/>
+  </property>
+  <property generated="never" lazy="false" name="address" type="java.lang.String">
+   <column name="ADDRESS"/>
+  </property>
+ </class>
+</hibernate-mapping>

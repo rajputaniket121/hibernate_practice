@@ -1,0 +1,17 @@
+package com.rays.user;
+
+import com.rays.crud.TestSave;
+
+public class TestUserModel {
+	public static void main(String[] args) {
+		testSave();
+	}
+	
+	public static void testSave() {
+		UserModel model = new UserModel();
+		UserDTO dto = new UserDTO();
+		
+		model.save(dto);
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.rays.auction;
+
+public class TestAuctionItems {
+	
+public static void main(String[] args) {
+	
+}
+
+}

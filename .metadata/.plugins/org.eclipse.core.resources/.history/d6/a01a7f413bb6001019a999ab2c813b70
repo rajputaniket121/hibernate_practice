@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 31 Oct 2025, 2:34:35???pm by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+   <class name="com.rays.auction.Bid" table="BID">
+    <id name="id" type="int" access="field">
+        <column name="ID" />
+        <generator class="assigned" />
+    </id>
+    <property name="amount" type="int" access="field">
+        <column name="AMOUNT" />
+    </property>
+    <property name="timeStamp" type="java.lang.String" access="field">
+        <column name="TIMESTAMP" />
+    </property>
+    <property name="auctionId" type="int" access="field">
+        <column name="AUCTION_ID" />
+    </property>
+</class>
+
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+package com.rays.auction;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class TestAuctionItems {
+
+	public static void main(String[] args) {
+		
+		Set<Bid> bids = new HashSet<Bid>();
+		bids.add(new Bid(4, 100, "just now"));
+		bids.add(new Bid(5, 300, "5 min ago"));
+		bids.add(new Bid(6, 200, "2min ago"));
+		
+		Set<Bid> items = new HashSet<Bid>();
+		bids.add(new Bid(4, 100, "just now"));
+		bids.add(new Bid(5, 300, "5 min ago"));
+		bids.add(new Bid(6, 200, "2min ago"));
+		
+		AuctionItem auctionItem = new AuctionItem(2, bids, "remote");
+		
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session =  sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+		session.save(auctionItem);
+		transaction.commit();
+		session.close();
+	}
+
+}

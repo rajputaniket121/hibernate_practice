@@ -1,0 +1,24 @@
+package com.rays.crud;
+
+import java.util.Date;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.rays.user.UserDTO;
+
+public class TestGet {
+	public static void main(String[] args) {
+		
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session =  sessionFactory.openSession();
+		UserDTO dto =   session.get(UserDTO.class,1);
+		session.save(dto);
+		
+		session.close();
+	}
+
+
+}

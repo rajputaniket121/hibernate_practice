@@ -1,0 +1,50 @@
+package com.rays.auction;
+
+import java.util.Set;
+
+public class AuctionItem {
+    private int id;
+    private Set<Bid> bids;
+    private Set<Item> items;
+    private String description;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public Set<Bid> getBids() {
+		return bids;
+	}
+	public void setBids(Set<Bid> bids) {
+		this.bids = bids;
+	}
+	public Set<Item> getItems() {
+		return items;
+	}
+	public void setItems(Set<Item> items) {
+		this.items = items;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public AuctionItem(int id, Set<Bid> bids, Set<Item> items, String description) {
+		super();
+		this.id = id;
+		this.bids = bids;
+		this.items = items;
+		this.description = description;
+	}
+	public AuctionItem() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+    
+    
+    
+
+    
+}
